@@ -1,0 +1,56 @@
+{
+	"geode": "3.9.2",
+	"gd": {
+		"win": "2.206",
+		"android": "2.206",
+		"mac": "2.206",
+		"ios": "2.206"
+	},
+	"id": "noobmw.rendermod",
+	"name": "RenderMod",
+	"version": "v1.0.0",
+	"developer": "noobmw",
+	"description": "Renders levels in different resolutions and frame rates. What more could you ask for? (a lot)",
+    "dependencies": [
+        {
+            "id": "eclipse.ffmpeg-api",
+            "version": ">=v1.0.4",
+            "importance": "required"
+        }
+    ],
+	"settings" : {
+		"includeUi" : {
+			"type" : "bool",
+			"default" : true,
+			"name" : "Include UI",
+			"description" : "Records the percentage bar, pause button, and other UI elements."
+		},
+		"liveAudio" : {
+			"type" : "bool",
+			"default" : false,
+			"name" : "Record game audio",
+			"description" : "Records the live game audio instead of adding the song after recording."
+		},
+		"fps" : {
+			"type" : "float",
+			"default" : 60,
+			"min" : 0,
+			"name" : "FPS",
+			"controls" : {
+				"input" : true
+			}
+		},
+		"resolution" : {
+			"type" : "string",
+			"default" : "1920x1080",
+			"name" : "Resolution",
+			"match" : "[0-9]+x[0-9]+"
+		},
+		"args" : {
+			"type" : "string",
+			"default" : "",
+			"name" : "Extra args",
+			"filter" : "0.123456789-qwertyuiopasdfghjklzxcvbnm,./;'[]\\=|+-_)(*&^%$#@!~`}{\":?><"
+		}
+	}
+}
